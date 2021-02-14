@@ -1,25 +1,24 @@
-install.packages("ggplot2")
-data <- read.csv("/Users/aditya149349/Downloads/PartB/Iris.csv")
+data <- iris
+
 summary(data)
 
 head(data)
 tail(data)
 
-mean(data$SepalLengthCm)
-median(data$SepalWidthCm)
-range(data$PetalLengthCm)
+mean(data$Sepal.Length)
+median(data$Sepal.Width)
+range(data$Petal.Length)
 
-var(data$PetalWidthCm)
-quantile(data$SepalLengthCm)
+var(data$Petal.Width)
+quantile(data$Sepal.Length)
 
 table(data$Species)
 
-cov(data$SepalLengthCm,data$PetalLengthCm)
-cor(data$SepalLengthCm,data$PetalLengthCm)
+cov(data$Sepal.Length,data$Petal.Length)
+cor(data$Sepal.Length,data$Petal.Length)
 
-hist(data$SepalLengthCm)
-plot(density(data$PetalWidthCm))
+hist(data$Sepal.Length)
+plot(density(data$Petal.Width))
 pie(table(data$Species), main="Number of Species Pie-Chart")
-barplot(table(data$SepalLengthCm), xlab="Sepal Length", ylab="Frequency")
-table(data$SepalLengthCm)
-plot(data$PetalLengthCm)
+barplot(table(data$Sepal.Length), xlab="Sepal Length", ylab="Frequency")
+plot(data$Petal.Length)
